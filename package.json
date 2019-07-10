@@ -1,6 +1,6 @@
 {
   "name": "foodima",
-  "hompage": "https://anewlens.github.io/foodima/",
+  "homepage": "https://anewlens.github.io/foodima/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
