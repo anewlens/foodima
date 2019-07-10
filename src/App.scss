@@ -1,0 +1,9 @@
+.App {
+    margin: 6rem 10rem;
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        margin-bottom: 6rem;
+    }
+}

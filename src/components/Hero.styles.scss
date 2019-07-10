@@ -1,0 +1,70 @@
+.hero {
+    height: 65rem;
+    width: 100%;
+    background-color: cornsilk;
+    border-radius: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-content {
+        width: 30%;
+        margin-left: 12rem;
+
+        &-headline {
+            font-size: 6.2rem;
+            margin-bottom: 1.6rem;
+        }
+
+        &-text {
+            font-size: 2.4rem;
+            line-height: 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &-illustration {
+        height:100%;
+        padding: 5rem 0rem;
+    }
+}
+
+.btn-inline {
+    display: flex;
+    align-items: center;
+
+    background: none;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+
+    transition: all .2s;
+
+    &:hover {
+        color: orange;
+
+        & .icon-arrowRight {
+            fill: orange;
+            animation: arrowShuffle .2s;
+        }
+    }
+}
+
+.icon-arrowRight {
+    margin-left: 1rem;
+}
+
+@keyframes arrowShuffle {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}

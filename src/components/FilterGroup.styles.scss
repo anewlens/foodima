@@ -1,0 +1,58 @@
+.filterGroup {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        margin-top: 2.4rem;
+    }
+
+    animation: slideDown .2s ease-out forwards;
+    transition: all .2s ease-out;
+}
+
+.filter-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.8rem;
+}
+
+.filter-button {
+    opacity: 0;
+    
+    &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 3rem;
+        height: 3rem;
+
+        background-color: hsl(0, 0%, 95%);
+        border-radius: 25%;
+
+        transition: all .2s ease-out;
+    }
+
+    &:checked + &-icon {
+        background-color: black;
+    }
+}
+
+.checkmark {
+    fill: hsl(0, 0%, 95%);
+    padding: .5rem;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,24 @@
+.recipesFilter {
+    grid-column: 1 / 2;
+    grid-row: 2 / span 5;
+
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-title {
+        font-size: 3rem;
+    }
+}
+
+.clearFilter {
+    background-color: transparent;
+    border: none;
+
+    font-size: 1.3rem;
+    color: orangered;
+}
