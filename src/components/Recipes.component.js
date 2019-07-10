@@ -2,7 +2,7 @@ import React from 'react'
 import './Recipes.styles.scss'
 
 import { ReactComponent as SearchIcon } from '../images/search.svg'
-import RecipesFilter from './RecipesFilter.component.jsx'
+import RecipesFilter from './RecipesFilter.component'
 import RecipeItem from './RecipeItem.component'
 import recipes from '../data/recipes'
 
