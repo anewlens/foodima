@@ -1,7 +1,7 @@
 {
   "name": "foodima",
+  "hompage": "https://anewlens.github.io/foodima/",
   "version": "0.1.0",
-  "hompage": " https://anewlens.github.io/foodima/",
   "private": true,
   "dependencies": {
     "node-sass": "^4.12.0",
