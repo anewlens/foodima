@@ -1,6 +1,7 @@
 .recipes {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 5% repeat(auto-fill, 35rem);
     grid-column-gap: 7rem;
     grid-row-gap: 7rem;
     align-content: center;
@@ -55,8 +56,4 @@
     margin-left: 2rem;
 
     z-index: 10;
-}
-
-.sort-option {
-    margin: 1rem 200rem;
 }

@@ -1,6 +1,8 @@
 .collection {
     margin-top: 5rem;
 
+    transition: all .2s ease-out;
+
     &-header {
         width: 100%;
     }

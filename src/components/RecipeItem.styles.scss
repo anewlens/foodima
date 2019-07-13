@@ -1,6 +1,13 @@
 .recipeItem {
+    box-sizing: content-box;
     display: flex;
     flex-direction: column;
+
+    align-self: stretch;
+
+    border-radius: 20px;
+
+    transition: all .2s ease-out;
 
     &-image {
         width: 100%;
@@ -14,6 +21,8 @@
         margin-top: 2rem;
 
         font-size: 2.4rem;
+
+        transition: inherit;
     }
 
     &-footer {
@@ -40,5 +49,4 @@
         font-weight: bold;
         color: grey;
     }
-
 }

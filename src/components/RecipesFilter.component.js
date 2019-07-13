@@ -2,9 +2,25 @@ import React, {useState} from 'react'
 import './RecipesFilter.styles.scss'
 import GenericFilters from './GenericFilters.component'
 import FilterCollection from './FilterCollection.component'
+import Filters from '../data/filters'
 
 
 const RecipesFilter = () => {
+
+    const GenericFIlters = [
+        {
+            name: 'Contest Winners',
+            value: 'contest-winner'
+        },
+        {
+            name: 'Featured',
+            value: 'featured'
+        },
+        {
+            name: 'Test Kitchen Approved',
+            value: 'approved'
+        }
+    ]
 
     return (
         <div className="recipesFilter">
@@ -13,15 +29,13 @@ const RecipesFilter = () => {
                 <button className="clearFilter">Clear Filter</button>
             </div>
 
-            <GenericFilters />
+            <GenericFilters items={GenericFIlters}/>
 
-            <FilterCollection name='Meal'/>
-
-            <FilterCollection name='Dish Type'/>
-
-            <FilterCollection name='Diet'/>
-
-            <FilterCollection name='Recipe Time'/>
+            {
+                Filters.map(filter => <FilterCollection
+                                    name={filter.name}
+                                    items={filter.items} />)
+            }
             
         </div>
     )

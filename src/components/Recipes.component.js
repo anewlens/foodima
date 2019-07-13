@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Recipes.styles.scss'
 
 import { ReactComponent as SearchIcon } from '../images/search.svg'
@@ -9,11 +9,24 @@ import recipes from '../data/recipes'
 
 const Recipes = () => {
 
+    const [ search, updateSearch ] = useState('')
+
+    const handleSearch = e => {
+        updateSearch(e.target.value)
+    }
+
+    const filteredList = recipes.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+
     return (
         <div className="recipes">
                 <h2 className="recipes-title">Recipes</h2>
                 <SearchIcon className="recipesSearchIcon"/>
-                <input type="text" placeholder='Search recipes and more...' className="recipes-search"/>
+                <input 
+                    type="text" 
+                    placeholder='Search recipes and more...'
+                    value={search}
+                    onChange={handleSearch}
+                    className="recipes-search"/>
                 <select name="sort" id="recipes-sort" className="recipes-sort">
                     <option value="Newest" className="sort-option">Newest</option>
                     <option value="Best Rated" className="sort-option">Best Rated</option>
@@ -23,12 +36,19 @@ const Recipes = () => {
 
                 <RecipesFilter />
 
-                {recipes.map(recipe => <RecipeItem
+                {search === '' 
+                    ? recipes.map(recipe => <RecipeItem
                                             name={recipe.name}
                                             imgUrl={recipe.imgUrl}
                                             author={recipe.author}
                                             rating={recipe.rating}
-                                            ratingsNumber={recipe.ratingsNumber} />)}
+                                            ratingsNumber={recipe.ratingsNumber} />)
+                    : filteredList.map(recipe => <RecipeItem
+                        name={recipe.name}
+                        imgUrl={recipe.imgUrl}
+                        author={recipe.author}
+                        rating={recipe.rating}
+                        ratingsNumber={recipe.ratingsNumber} />)}
 
         </div>
     )

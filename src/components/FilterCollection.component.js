@@ -5,7 +5,7 @@ import FilterGroup from './GenericFilters.component'
 import {ReactComponent as PlusIcon} from '../images/plus.svg'
 import {ReactComponent as XIcon} from '../images/x.svg'
 
-const FilterCollection = ({name}) => {
+const FilterCollection = ({name, items}) => {
 
     const [openCollection, setCollection] = useState(false)
 
@@ -17,10 +17,10 @@ const FilterCollection = ({name}) => {
         <div className="collection">
                 <div className="collection-header">
                     <label 
-                        htmlFor="meal"
+                        htmlFor={name}
                         className='collection-title'>{name} 
                         <input 
-                            id='meal'
+                            id={name}
                             type="checkbox"
                             onChange={handleCollection}
                             className='collection-input'/>
@@ -33,7 +33,7 @@ const FilterCollection = ({name}) => {
                 </div>
                 
                 { openCollection
-                    ? <FilterGroup />
+                    ? <FilterGroup items={items}/>
                     : null }
             </div>
     )

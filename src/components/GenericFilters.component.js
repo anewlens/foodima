@@ -3,19 +3,12 @@ import "./FilterGroup.styles.scss"
 
 import FilterCheckbox from './FilterCheckbox.component'
 
-const GenericFilters = () => (
+const GenericFilters = ({items}) => (
     <div className="genericFilters filterGroup">
-        <FilterCheckbox
-            name="Contest Winners"
-            value="contest" />
 
-        <FilterCheckbox
-            name="Featured"
-            value="featured" />
-
-        <FilterCheckbox
-            name="Test Kitchen Approved"
-            value="approved" />
+        {items.map(filter => <FilterCheckbox
+                                name={filter.name}
+                                value={filter.value} />)}
     </div>
 )
 
