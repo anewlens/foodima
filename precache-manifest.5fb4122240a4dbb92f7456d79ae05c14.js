@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "803eabb47413e5a1ab34bba210c853fd",
+    "revision": "188ff655009b1533a122f47439367824",
     "url": "/foodima/index.html"
   },
   {
-    "revision": "b4ccf75817228608f111",
-    "url": "/foodima/static/css/main.88302549.chunk.css"
+    "revision": "0829105b9b147e4ced27",
+    "url": "/foodima/static/css/main.0b6760b3.chunk.css"
   },
   {
-    "revision": "407ab141deba78abe319",
-    "url": "/foodima/static/js/2.d042e1ad.chunk.js"
+    "revision": "72c252c37735d2180df8",
+    "url": "/foodima/static/js/2.c2695c00.chunk.js"
   },
   {
-    "revision": "b4ccf75817228608f111",
-    "url": "/foodima/static/js/main.af893a43.chunk.js"
+    "revision": "0829105b9b147e4ced27",
+    "url": "/foodima/static/js/main.1cbfe31a.chunk.js"
   },
   {
     "revision": "67c3b461e4d0b8c4fbe8",
